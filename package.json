@@ -1,0 +1,69 @@
+{
+  "name": "chronicles-of-the-lost-realm",
+  "version": "0.2.0",
+  "description": "Open-world survival RPG / creature collection / base building. Web, Android, iOS.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "sync:android": "npm run build && cap sync android",
+    "sync:ios": "npm run build && cap sync ios",
+    "open:android": "cap open android",
+    "open:ios": "cap open ios",
+    "balance": "tsx tools/balance-sim.ts",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:desktop": "playwright test --project=desktop",
+    "e2e:mobile": "playwright test --project=mobile",
+    "icons": "node tools/make-icons.mjs",
+    "verify": "npm run typecheck && npm test && npm run balance && npm run e2e"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.4.0",
+    "pixi.js": "^8.20.1",
+    "preact": "^10.27.2"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/ios": "^7.0.0",
+    "@playwright/test": "1.62",
+    "@preact/preset-vite": "^2.10.1",
+    "playwright": "1.62",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vitest": "^4.1.11",
+    "wait-on": "^9.1.0"
+  },
+  "license": "MIT",
+  "author": "mp1143",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mp1143/chronicles-of-the-lost-realm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mp1143/chronicles-of-the-lost-realm/issues"
+  },
+  "homepage": "https://github.com/mp1143/chronicles-of-the-lost-realm#readme",
+  "keywords": [
+    "game",
+    "rpg",
+    "survival",
+    "creature-collection",
+    "procedural-generation",
+    "typescript",
+    "pixijs",
+    "capacitor",
+    "pwa"
+  ],
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}

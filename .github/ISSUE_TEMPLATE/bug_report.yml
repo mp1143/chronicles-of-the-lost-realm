@@ -1,0 +1,56 @@
+name: Bug report
+description: Something behaves wrongly
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The single most useful thing you can give us is the **world seed** —
+        it is printed in the Map panel, and it makes almost every
+        world-generation bug reproducible on someone else's machine.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start a new run
+        2. Walk east until the shore
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: seed
+    attributes:
+      label: World seed
+      description: Map panel, next to the Shard name.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where
+      multiple: true
+      options:
+        - Browser (desktop)
+        - Browser (mobile)
+        - Installed PWA
+        - Android build
+        - iOS build
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Browser / device / OS
+      placeholder: Chrome 131 on Pixel 7, Android 15
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output
+      description: Anything red in the browser console.
+      render: shell

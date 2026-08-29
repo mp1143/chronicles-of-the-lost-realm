@@ -1,0 +1,38 @@
+name: Feature or content proposal
+description: A new creature, system, or change to an existing one
+labels: [enhancement]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you want to add or change
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it makes the game better
+      description: What does the player do differently because of it?
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Content (creature, item, recipe, structure)
+        - Gameplay system
+        - UI / UX
+        - Accessibility
+        - Performance
+        - Tooling / tests
+        - Documentation
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you file
+      options:
+        - label: I checked docs/Roadmap.md to see if this is already planned
+        - label: I checked docs/GameDesignDocument.md for existing design intent

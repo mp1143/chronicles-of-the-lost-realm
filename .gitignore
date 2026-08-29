@@ -1,0 +1,24 @@
+node_modules/
+dist/
+smoke-out/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+
+# Native projects ARE committed (they hold signing config, icons, store
+# metadata). Only their build output is ignored.
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+android/app/src/main/assets/public/
+ios/App/build/
+ios/App/Pods/
+ios/App/App/public/
+ios/App/output/
+
+# Signing material never enters the repo.
+keystore.properties
+*.keystore
+*.jks

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Design and technical documentation
+    url: https://github.com/mp1143/chronicles-of-the-lost-realm/tree/main/docs
+    about: Read the design doc, technical design, test plan and roadmap first.

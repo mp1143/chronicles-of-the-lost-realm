@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Chronicles of the Lost Realm</string>
+    <string name="title_activity_main">Chronicles of the Lost Realm</string>
+    <string name="package_name">com.lostrealm.chronicles</string>
+    <string name="custom_url_scheme">com.lostrealm.chronicles</string>
+</resources>
