@@ -36,8 +36,8 @@
     "@preact/preset-vite": "^2.10.1",
     "playwright": "1.62",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
     "vitest": "^4.1.11",
     "wait-on": "^9.1.0"
   },

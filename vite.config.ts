@@ -9,8 +9,12 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       output: {
-        // Split the renderer out of app code so gameplay patches don't re-download Pixi.
-        manualChunks: { pixi: ['pixi.js'] },
+        // Split the renderer out of app code so gameplay patches don't re-download
+        // Pixi. Rolldown (Vite 8+) takes a function here, not an object map.
+        manualChunks(id: string) {
+          if (id.includes('node_modules/pixi.js')) return 'pixi';
+          return undefined;
+        },
       },
     },
   },

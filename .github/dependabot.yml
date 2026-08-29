@@ -1,14 +1,26 @@
 version: 2
 updates:
-  # Six runtime dependencies is the whole surface; monthly is plenty.
   - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: monthly
     open-pull-requests-limit: 5
+    # Group only the safe updates. Majors get their own PR each, because a
+    # bundle containing three major bumps is unreviewable and unmergeable —
+    # one breaking change blocks five harmless ones.
     groups:
       dev-dependencies:
         dependency-type: development
+        update-types: [minor, patch]
+      production-dependencies:
+        dependency-type: production
+        update-types: [minor, patch]
+    ignore:
+      # Capacitor majors require running `npx cap migrate` and changes to the
+      # committed android/ and ios/ projects, which cannot be verified without
+      # an Android SDK and a Mac. Tracked as an issue instead.
+      - dependency-name: "@capacitor/*"
+        update-types: [version-update:semver-major]
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
