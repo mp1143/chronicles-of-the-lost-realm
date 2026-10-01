@@ -23,8 +23,8 @@
     "verify": "npm run typecheck && npm test && npm run balance && npm run e2e"
   },
   "dependencies": {
-    "@preact/signals": "^2.4.0",
-    "pixi.js": "^8.20.1",
+    "@preact/signals": "^2.11.2",
+    "pixi.js": "^8.21.0",
     "preact": "^10.27.2"
   },
   "devDependencies": {
